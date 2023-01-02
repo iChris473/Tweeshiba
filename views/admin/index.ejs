@@ -1,0 +1,63 @@
+
+
+<%- include('partials/adminheader.ejs') %>
+
+
+<body class="relative">
+    <!-- Nav Section -->
+
+    <%- include('partials/adminnav.ejs') %>
+
+    <div class=" overflow-x-hidden grid grid-cols-4">
+
+        <!-- SideBar -->
+        <%- include('partials/adminside.ejs') %>
+
+        <!-- Main Section -->
+        <section class="col-span-4 md:col-span-3 mt-24s">
+            <div class="mt-20">
+                <!-- Total Users -->
+                <div class="w-[97%] p-4 border rounded-md goldenB md:max-w-[700px] mx-auto shadow-md m-2 space-y-7">
+                    <div class="flex flex-col items-center justify-between gap-7">
+                        <div class="flex items-center w-full justify-between">
+                            <h2 class="text-gray-300 tracking-wider font-bold text-md mx-5">TOTAL USERS</h2>
+                            <p class="text-green-600 font-bold text-md">^ 20 %</p>
+                        </div>
+                        <h1 class="text-3xl text-center w-full font-bold text-gray-300 totalUsers"></h1>
+                        <a href="/admin/users" class="block mx-auto w-[90%] text-center text-pink-300 border-b pb-2 font-semibold text-sm border-pink-300">View all users</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/public_files/admin/admin.js"></script>
+    <script>
+
+      async function getTotalUsers() {
+
+        fetch(`${url}/user/number/`, {
+          method: "GET",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        })
+          .then(function (response) {
+            if (response.ok) {
+              return response.json();
+            }
+            return Promise.reject(response);
+          })
+          .then(function (data) {
+            totalUsers.innerHTML = data - 1
+          })
+          .catch(function (err) {
+            console.log(err)
+          })
+      }
+
+      getTotalUsers();
+
+    </script>
+</body>
+</html>

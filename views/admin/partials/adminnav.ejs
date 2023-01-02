@@ -1,0 +1,25 @@
+<nav style="top: 0 !important;"
+    class="bg-[#1b1b1b] border-b shadow border-green-900 p-5 fixed w-full z-50 flex items-center justify-between md:block">
+    <script>
+        const admin = JSON.parse(window.localStorage.getItem('admin'));
+        // if(!admin){
+        //     window.location.href = '/admin/login';
+        // }
+    </script>
+    <a href="/admin" class="f-logo"
+        style="text-decoration: none; display: flex; align-items: center; justify-content: flex-start;">
+        <img src="/public_files/logo.png" style="height: 50px; object-fit: contain;" alt="Logo" loading="lazy">
+        <h2 class="prosto" style="color: rgb(82, 169, 140);">Tweeshiba - Admin</h2>
+    </a>
+    <div class="md:hidden menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </div>
+    <div class="hidden cancel md:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </div>
+    <script src="/public_files/mainjs/baseUrl.js"></script>
+</nav>

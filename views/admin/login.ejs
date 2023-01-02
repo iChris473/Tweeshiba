@@ -1,0 +1,49 @@
+
+<%- include('partials/adminheader.ejs') %>
+
+
+<body class="relative min-h-screen">
+  <img src="/public/img/adminlog.jpg" class="h-full w-screen absolute opacity -z-50" alt="">
+    <!-- Nav Section -->
+    <nav style="top: 0;" class="bg-[#1b1b1b] border-b shadow border-green-900 p-5 fixed w-full z-50 flex items-center justify-between md:block bg-opacity-70">
+      <a href="/admin" class="f-logo"
+        style="text-decoration: none; display: flex; align-items: center; justify-content: flex-start;">
+        <img src="/public_files/logo.png" style="height: 50px; object-fit: contain;" alt="Logo" loading="lazy">
+        <h2 class="prosto" style="color: rgb(82, 169, 140);">Tweeshiba - Admin</h2>
+      </a>
+    </nav>
+        <!-- Main Section -->
+        <section class="flex flex-col items-center justify-center gap-5 pt-20 max-w-[700px] mx-auto z-40">
+            <h1 class="text-gray-300 text-3xl ultra text-center my-10">Log In</h1>
+            <div class="p-4 border rounded-md goldenB shadow-md w-full z-40">
+                <form class="space-y-5 py-5 form w-full">
+                    <div class="space-y-2">
+                      <p class="text-md font-bold text-gray-200 tracking-wider">
+                        Email
+                      </p>
+                      <input
+                        required
+                        type="email"
+                        class="bg-transparent border-b outline-none w-full placeholder:opacity-70 placeholder:text-md border-gray-400 email"
+                      />
+                    </div>
+                    <div class="space-y-2">
+                      <p class="text-md font-bold text-gray-200 tracking-wider">
+                       Password
+                      </p>
+                      <input
+                        required
+                        type="password"
+                        class="bg-transparent border-b outline-none w-full placeholder:opacity-70 placeholder:text-md border-gray-400 password"
+                      />
+                    </div>
+                    <button type="submit" class="goldenBtn shadow-md shadow-yellow-700 p-4 rounded-md px-10 font-bold text-lg tracking-wide my-5 block mx-auto login">Login</button>
+                  </form>
+            </div>
+        </section>
+
+        <!-- Javascript links and codes -->
+        <script src="/public_files/mainjs/baseUrl.js"></script>  
+        <script src="/public_files/admin/login.js"></script>
+</body>
+</html>
