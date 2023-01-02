@@ -20,6 +20,9 @@ app.use('/public_files', express.static('public_files'));
 // index route for User Domain
 app.get("/", (req, res) => res.sendFile(__dirname + "/public.html"))
 
+// register route for User Domain
+app.get("/register", (req, res) => res.sendFile(__dirname + "/register.html"))
+
 
 const port = process.env.PORT || 1400
 
