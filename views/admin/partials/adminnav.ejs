@@ -2,9 +2,9 @@
     class="bg-[#1b1b1b] border-b shadow border-green-900 p-5 fixed w-full z-50 flex items-center justify-between md:block">
     <script>
         const admin = JSON.parse(window.localStorage.getItem('admin'));
-        // if(!admin){
-        //     window.location.href = '/admin/login';
-        // }
+        if(!admin){
+            window.location.href = '/admin/login';
+        }
     </script>
     <a href="/admin" class="f-logo"
         style="text-decoration: none; display: flex; align-items: center; justify-content: flex-start;">
