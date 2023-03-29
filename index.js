@@ -63,6 +63,6 @@ app.get("/admin/thispresale", (req, res) => res.render("./admin/thispresale"))
 app.get("/admin/generate", (req, res) => res.render("./admin/generate"))
 
 
-const port = process.env.PORT || 1400
+const port = process.env.PORT || 1600
 
 app.listen(port, () => console.log(`Backend running on ${port}`))
